@@ -5,7 +5,7 @@ month = date.getMonth() + 1;
 
 dateContent.value = date.getFullYear() + '-' + ( month < 10 ? '0' + month : month ) + '-' + ( date.getDate() - 1 );
 
-var title;
+var titleV;
 
 function load() {
 	const nasa = new Nasa;
@@ -23,7 +23,7 @@ function load() {
 		const dataJSON = nasa.getData( dateContent.value )
 		
 		dataJSON.then(data => {data
-			titleUI.innerText = title =data.title;
+			titleUI.innerText = titleV =data.title;
 			copyrightUI.innerText=data.copyright;
 			dateUI.innerText = data.date;
 			explanationUI.innerText = content = data.explanation;
@@ -62,5 +62,5 @@ function downloadPDF() {
       {
         'width': 180,'elementHandlers': elementHandler
       });
-        doc.save(`${title}.pdf`);
+        doc.save(`${titleV}.pdf`);
 }
