@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <title>APOD</title>
+</head>
+<body onload= "load()">
+    
+	<div class= "container">
+		<div class= "dateContainer">
+			<label>Enter date: </label>
+			<input type= "date" class= "date" />
+			<button onclick= "load()">Load Content</button>
+		</div>
+		
+		<div id="info">
+			<h1 id="title"></h1>
+			
+			<figure class= "figure">
+				
+				<img id="nasaImg" src="#" alt="">
+				
+				<figcaption>Figure</figcaption>
+			</figure>
+			
+			<div id="subText">
+				<small id="copyright"></small>
+				<small id="date"></small>
+			</div>
+			
+			<p id="explanation"></p>
+			
+			<button onclick= "downloadPDF()">Download PDF</button>
+		</div>
+		
+		<div class= "pdf" style="display: none;"></div>
+		
+		<div class= "error"></div>
+		
+		<hr />
+		<footer>
+			2020&copy; Google Code-In and NASA. All rights reserved. Developed by SD Asif Hossein.
+		</footer>
+    </div>
+    
+    <script src="nasa.js"></script>
+    <script src="app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
+</body>
+</html>
