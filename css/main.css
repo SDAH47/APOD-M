@@ -39,7 +39,7 @@ div.dateContainer {
 
 div.dateContainer input.date {
 	height: 35px;
-	width: 300px;
+	width: 40%;
 	border: 1px black solid;
 	border-radius: 3px;
 	box-sizing: border-box;
